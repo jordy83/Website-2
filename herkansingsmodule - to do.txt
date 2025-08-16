@@ -1,0 +1,128 @@
+Nog doen voor website:
+
+Dashboard: 
+	Soort, duur, vak, pta onderdeel
+		Toetsen aanmaken handmatig	
+		Toetsen aanmaken csv
+
+	Export toetslijst pdf per toets
+		Aantal leerlingen
+		Aantal surveillanten berekend op basis van aantal leerlingen
+		Soort toets		
+		Lokaal
+		aantal lokaal op basisi van aantal leerlingen
+
+	-	Statistieken per Leerling.
+	
+	Export  toetsoverzicht pdf (totaal)
+
+	Via dachboard kan coordinator wel gewoon lln inschrijven na deadline
+	Coordinator kan handmatig inschrijvingen sluiten.
+
+	Toetsen aanpassen via dashboard werkt nog niet helemaal. klas gaat fout
+
+
+Accounts: Koppelen met school?
+	Leerling accounts aanmaken
+	Admin accounts aanmaken (leco en rooster)
+
+Leerling: na opnieuw inloggen krijgt weer overzicht van eerder gemaakte keuzes
+		Niet meer dan twee toetsen
+		Niet meerdere keren dezelfde toets
+	na Dealine toets niet niet te kiezen (werkt nog niet)
+
+Deadline voor inschrijven toevoegen
+
+Geweldig idee, Jordy! Je hebt al een solide front-end gebouwd, dus versie 2.0 kan zich richten op schaalbaarheid, veiligheid en gebruikersgemak. Hier is een uitgewerkt plan voor **Toetsplanner 2.0** — met backend-integratie, gebruikersbeheer en extra functionaliteit.
+
+---
+
+## 🚀 Toetsplanner 2.0 – Uitgebreid Projectplan
+
+### 🔧 Technische Stack (suggestie)
+
+| Component       | Technologie                          |
+|----------------|---------------------------------------|
+| Front-end      | HTML, Tailwind CSS, JavaScript        |
+| Backend        | Node.js + Express (of Django/Flask)   |
+| Database       | MongoDB (NoSQL) of PostgreSQL (SQL)   |
+| Authenticatie  | JWT + bcrypt (of Firebase Auth)       |
+| E-mailservice  | Nodemailer / SendGrid / Mailgun       |
+| Hosting        | Vercel (front-end) + Render / Railway (backend) |
+
+---
+
+### 🧩 Nieuwe Functionaliteiten
+
+#### 1. 🔐 Gebruikersbeheer
+- Registratie + login met wachtwoord
+- Rollen: Leerling, Docent, Beheerder
+- Wachtwoord vergeten + reset via e-mail
+- Profielpagina met bewerkbare gegevens
+
+#### 2. 📅 Toetsbeheer (voor docenten)
+- Toetsen aanmaken, bewerken, verwijderen
+- Deadline instellen voor inschrijving
+- Maximaal aantal deelnemers instellen
+- Overzicht van ingeschreven leerlingen
+
+#### 3. 📝 Inschrijvingsmodule (voor leerlingen)
+- Toetsen filteren op vak, datum, docent
+- Inschrijving wijzigen of annuleren vóór deadline
+- Bevestiging per e-mail na inschrijving
+- Kalenderweergave van geplande toetsen
+
+#### 4. 📤 E-mailintegratie
+- Echte e-mails via backend (geen mailto)
+- Automatische bevestiging bij inschrijving
+- Herinnering 24 uur voor toetsmoment
+
+#### 5. 📊 Dashboard & Statistieken
+- Voor docenten: aantal inschrijvingen per toets
+- Voor leerlingen: overzicht van komende toetsen
+- Voor beheerders: systeemgebruik en logs
+
+#### 6. 📄 Export & Print
+- Download inschrijvingen als PDF of CSV
+- Printbare toetsroosters per klas
+
+---
+
+### 📆 Planning & Roadmap
+
+| Fase           | Taken                                                                 | Tijdsschatting |
+|----------------|----------------------------------------------------------------------|----------------|
+| 🔹 Fase 1       | Backend opzetten + database structuur                                | 1 week         |
+| 🔹 Fase 2       | Authenticatie + gebruikersbeheer                                     | 1 week         |
+| 🔸 Fase 3       | Toetsbeheer + inschrijvingslogica                                    | 2 weken        |
+| 🔸 Fase 4       | E-mailintegratie + notificaties                                      | 1 week         |
+| 🔸 Fase 5       | Dashboard + exportmogelijkheden                                      | 1 week         |
+| 🔸 Fase 6       | Testen + deployen + documentatie                                     | 1 week         |
+
+_Totaal: ± 7 weken (flexibel afhankelijk van teamgrootte)_
+
+---
+
+### 🧠 Extra ideeën voor later
+
+- ✅ 2FA (tweefactorauthenticatie)
+- 📱 Mobiele app (React Native of Flutter)
+- 🌍 Meertalige interface (NL/EN)
+- 🧪 Integratie met toetsresultaten (cijfers)
+- 🔔 Pushnotificaties via browser of app
+
+---
+
+
+
+	
+
+
+	
+
+
+	
+
+
+
+

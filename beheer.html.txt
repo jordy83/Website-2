@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Toetsinschrijvingen - Beheer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <div class="max-w-5xl mx-auto py-10 px-6 bg-white shadow rounded">
+    <h1 class="text-3xl font-bold mb-6 text-blue-600 text-center">📋 Overzicht van Inschrijvingen</h1>
+
+    <table class="w-full table-auto border-collapse">
+      <thead>
+        <tr class="bg-blue-100 text-left">
+          <th class="border px-4 py-2">Naam</th>
+          <th class="border px-4 py-2">Klas</th>
+          <th class="border px-4 py-2">Toets</th>
+          <th class="border px-4 py-2">Datum</th>
+        </tr>
+      </thead>
+      <tbody id="tabelBody" class="text-sm"></tbody>
+    </table>
+
+    <div id="status" class="mt-6 text-center text-gray-500"></div>
+  </div>
+
+  <script>
+    async function haalInschrijvingenOp() {
+      try {
+        const res = await fetch('http://localhost:3000/inschrijvingen');
+        const data = await res.json();
+
+        const tbody = document.getElementById('tabelBody');
+        const status = document.getElementById('status');
+
+        if (data.length === 0) {
+          status.textContent = "Er zijn nog geen inschrijvingen.";
+          return;
+        }
+
+        data.forEach(item => {
+          const rij = document.createElement('tr');
+          rij.innerHTML = `
+            <td class="border px-4 py-2">${item.naam}</td>
+            <td class="border px-4 py-2">${item.klas}</td>
+            <td class="border px-4 py-2">${item.toets}</td>
+            <td class="border px-4 py-2">${new Date(item.datum).toLocaleString()}</td>
+          `;
+          tbody.appendChild(rij);
+        });
+      } catch (err) {
+        document.getElementById('status').textContent = "❌ Fout bij ophalen van inschrijvingen.";
+        console.error(err);
+      }
+    }
+
+    haalInschrijvingenOp();
+  </script>
+
+</body>
+</html>
