@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Projecten | Roostertool</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script>
+    <script src="storage.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            showProjects();
+        });
+        function showProjects() {
+            const projects = getProjects();
+            const list = document.getElementById("projecten-list");
+            list.innerHTML = "";
+            projects.forEach((proj, idx) => {
+                list.innerHTML += `<li>
+                    <strong>${proj.name}</strong><br>
+                    Max. inschrijvingen per leerling: ${proj.maxInsch}<br>
+                    Voorwaarden: ${proj.voorwaarden}<br>
+                    Coördinator: ${proj.coordinator}<br>
+                </li>`;
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div id="menu"></div>
+    </header>
+    <main>
+        <h2>Projectenoverzicht</h2>
+        <ul id="projecten-list"></ul>
+    </main>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Roostertool</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script>
+    <script src="storage.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById("loginBtn").onclick = function() {
+                const role = document.getElementById('role').value;
+                const username = document.getElementById('username').value;
+                localStorage.setItem('userRole', role);
+                localStorage.setItem('username', username);
+                window.location.href = 'index.html';
+            };
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div id="menu"></div>
+    </header>
+    <main>
+        <h2>Login Demo</h2>
+        <label for="username">Naam:</label>
+        <input type="text" id="username" placeholder="Vul je naam in">
+        <label for="role">Kies jouw rol:</label>
+        <select id="role">
+            <option value="leerling">Leerling</option>
+            <option value="medewerker">Medewerker</option>
+            <option value="coordinator">Coördinator</option>
+            <option value="admin">Admin</option>
+        </select>
+        <button id="loginBtn">Inloggen</button>
+    </main>
+</body>
+</html>

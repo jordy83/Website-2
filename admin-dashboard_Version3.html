@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | Roostertool</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script>
+    <script src="storage.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            showProjects();
+            showUserOptions();
+            document.getElementById("createProjectBtn").onclick = function() {
+                const name = document.getElementById("projectName").value;
+                const maxInsch = parseInt(document.getElementById("maxInsch").value);
+                const voorwaarden = document.getElementById("voorwaarden").value;
+                const coord = document.getElementById("coordinator").value;
+                createProject(name, maxInsch, voorwaarden, coord);
+                showProjects();
+            };
+        });
+        function showProjects() {
+            const list = document.getElementById("project-list");
+            list.innerHTML = "";
+            const projects = getProjects();
+            projects.forEach((proj, idx) => {
+                list.innerHTML += `<li>
+                    <strong>${proj.name}</strong><br>
+                    Max. inschrijvingen: ${proj.maxInsch}<br>
+                    Voorwaarden: ${proj.voorwaarden}<br>
+                    Coördinator: ${proj.coordinator}<br>
+                </li>`;
+            });
+        }
+        function showUserOptions() {
+            const select = document.getElementById("coordinator");
+            select.innerHTML = "";
+            const users = getUsers("coordinator");
+            users.forEach(u => {
+                select.innerHTML += `<option value="${u}">${u}</option>`;
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div id="menu"></div>
+    </header>
+    <main>
+        <h2>Admin Dashboard</h2>
+        <section>
+            <h3>Projecten beheren</h3>
+            <ul id="project-list"></ul>
+            <h4>Nieuw project aanmaken</h4>
+            <input type="text" id="projectName" placeholder="Projectnaam">
+            <input type="number" id="maxInsch" placeholder="Max inschrijvingen per leerling">
+            <input type="text" id="voorwaarden" placeholder="Voorwaarden">
+            <label for="coordinator">Coördinator:</label>
+            <select id="coordinator"></select>
+            <button id="createProjectBtn">Project aanmaken</button>
+        </section>
+    </main>
+</body>
+</html>

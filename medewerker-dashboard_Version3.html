@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Medewerker Dashboard | Roostertool</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script>
+    <script src="storage.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            showProjects();
+        });
+        function showProjects() {
+            const projects = getProjects();
+            const list = document.getElementById("all-project-list");
+            list.innerHTML = "";
+            projects.forEach((proj, idx) => {
+                list.innerHTML += `<li>
+                    <strong>${proj.name}</strong><br>
+                    Coördinator: ${proj.coordinator}<br>
+                    Voorwaarden: ${proj.voorwaarden}<br>
+                </li>`;
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div id="menu"></div>
+    </header>
+    <main>
+        <h2>Medewerker Dashboard</h2>
+        <section>
+            <h3>Alle projecten</h3>
+            <ul id="all-project-list"></ul>
+        </section>
+    </main>
+</body>
+</html>
