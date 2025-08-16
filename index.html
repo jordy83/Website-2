@@ -1,137 +1,138 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RoosterTool: Slim en Eenvoudig Roosteren</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RoosterTool: Slim en Eenvoudig Roosteren</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
+    
+    <header class="bg-white shadow-md sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <a href="index.html" class="text-2xl font-bold text-blue-600">RoosterTool</a>
+            </div>
+            <nav class="flex space-x-6">
+                <a href="login.html" class="tab-link text-gray-600 hover:text-blue-600 font-medium transition-colors border-b-2 border-transparent pb-2">Inloggen</a>
+                <a href="contact.html" class="tab-link text-gray-600 hover:text-blue-600 font-medium transition-colors border-b-2 border-transparent pb-2">Contact</a>
+            </nav>
+            <a href="dashboard.html" class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-blue-700 transition-colors duration-200 ease-in-out">
+                Admin Login
+            </a>
+        </div>
+    </header>
 
-    <header class="bg-white shadow-md relative z-20">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <a href="index.html" class="text-2xl font-bold text-blue-600">RoosterTool</a>
-            </div>
-            <div class="flex items-center gap-4">
-                <a href="login.html" class="text-blue-600 hover:text-blue-800 transition-colors font-semibold">Inloggen</a>
-                <a href="contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-blue-700 transition-colors duration-200 ease-in-out">
-                    Contact
-                </a>
-            </div>
-        </div>
-    </header>
+    <main class="space-y-12">
+        <section class="bg-blue-600 text-white py-24 relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-blue-700 via-blue-600 to-blue-500 opacity-20"></div>
+            <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+                <h2 class="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight tracking-tight drop-shadow-lg">
+                    De Slimste Manier om te Roosteren
+                </h2>
+                <p class="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto mb-10 drop-shadow-md">
+                    Of het nu gaat om toetsen, workshops of oudergesprekken, de RoosterTool maakt plannen eenvoudig, overzichtelijk en efficiënt.
+                </p>
+                <a href="login.html"
+                    class="inline-block bg-white text-blue-600 font-bold px-8 py-4 rounded-full text-lg hover:bg-blue-50 transition-transform transform hover:scale-105 shadow-lg">
+                    Inloggen >>
+                </a>
+            </div>
+        </section>
+    
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center text-gray-900 mb-4">Waarom de RoosterTool?</h3>
+                <p class="text-center text-gray-600 max-w-3xl mx-auto mb-16">De RoosterTool is ontworpen om plannen te vereenvoudigen en communicatie te verbeteren, zodat iedereen tijd bespaart.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:border-blue-300 transform hover:-translate-y-1">
+                        <div class="flex items-center justify-center h-16 w-16 bg-blue-100 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2 text-gray-900">Bespaar Waardevolle Tijd</h4>
+                        <p class="text-gray-600">Automatiseer het inschrijfproces en elimineer handmatige administratie. Minder gedoe, meer efficiëntie voor iedereen.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:border-blue-300 transform hover:-translate-y-1">
+                        <div class="flex items-center justify-center h-16 w-16 bg-blue-100 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0h6m4 0V5a2 2 0 00-2-2h-2a2 2 0 00-2 2v14m-4 0h6m-6 0H9" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2 text-gray-900">Kristalhelder Overzicht</h4>
+                        <p class="text-gray-600">Zie in één oogopslag wie zich heeft ingeschreven en welke plekken nog beschikbaar zijn, zonder chaos of verwarring.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:border-blue-300 transform hover:-translate-y-1">
+                        <div class="flex items-center justify-center h-16 w-16 bg-blue-100 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.08 12.08 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2 text-gray-900">Voorkom Planningconflicten</h4>
+                        <p class="text-gray-600">Ons systeem zorgt ervoor dat je nooit dubbele boekingen hebt, wat fouten en frustratie voorkomt voor zowel beheerders als gebruikers.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:border-blue-300 transform hover:-translate-y-1">
+                        <div class="flex items-center justify-center h-16 w-16 bg-blue-100 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2 text-gray-900">Altijd en Overal Toegankelijk</h4>
+                        <p class="text-gray-600">De RoosterTool is volledig webgebaseerd, wat betekent dat je overal met een internetverbinding je rooster kunt beheren of inzien.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:border-blue-300 transform hover:-translate-y-1">
+                        <div class="flex items-center justify-center h-16 w-16 bg-blue-100 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2 text-gray-900">Intuïtief en Simpel</h4>
+                        <p class="text-gray-600">Het design is zo helder dat iedereen direct aan de slag kan. Geen lange handleidingen, geen training nodig.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:border-blue-300 transform hover:-translate-y-1">
+                        <div class="flex items-center justify-center h-16 w-16 bg-blue-100 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2v5l-1.25 1.5M15 7a2 2 0 00-2-2h-2a2 2 0 00-2 2v5l-1.25 1.5M15 7H9" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2 text-gray-900">Veilige Gegevensopslag</h4>
+                        <p class="text-gray-600">De gegevens van jou en je gebruikers zijn veilig opgeslagen, met de nodige maatregelen om de privacy te waarborgen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <h3 class="text-3xl font-bold text-gray-900 mb-4">Klaar om te beginnen?</h3>
+                <p class="text-lg text-gray-600 mb-8">
+                    Sluit je aan bij de vele scholen, bedrijven en organisaties die de RoosterTool gebruiken voor een soepele planning.
+                </p>
+                <a href="contact.html"
+                    class="inline-block bg-blue-600 text-white font-bold px-10 py-4 rounded-full text-xl hover:bg-blue-700 transition-colors duration-200 ease-in-out shadow-lg">
+                    Contact 🚀
+                </a>
+            </div>
+        </section>
+    </main>
 
-    <section class="bg-blue-600 text-white py-24 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-blue-700 via-blue-600 to-blue-500 opacity-20"></div>
-        <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
-            <h2 class="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight tracking-tight drop-shadow-lg">
-                De Slimste Manier om te Roosteren
-            </h2>
-            <p class="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto mb-10 drop-shadow-md">
-                Of het nu gaat om toetsen, workshops of oudergesprekken, de RoosterTool maakt plannen eenvoudig, overzichtelijk en efficiënt.
-            </p>
-            <a href="login.html"
-               class="inline-block bg-white text-blue-600 font-bold px-8 py-4 rounded-full text-lg hover:bg-blue-50 transition-transform transform hover:scale-105 shadow-lg">
-                Inloggen >>
-            </a>
-        </div>
-    </section>
-
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <h3 class="text-3xl font-bold text-center text-gray-900 mb-4">Waarom de RoosterTool?</h3>
-            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-16">De RoosterTool is ontworpen om plannen te vereenvoudigen en communicatie te verbeteren, zodat iedereen tijd bespaart.</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:border-blue-300 transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center h-16 w-16 bg-blue-100 rounded-full mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-semibold mb-2 text-gray-900">Bespaar Waardevolle Tijd</h4>
-                    <p class="text-gray-600">Automatiseer het inschrijfproces en elimineer handmatige administratie. Minder gedoe, meer efficiëntie voor iedereen.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:border-blue-300 transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center h-16 w-16 bg-blue-100 rounded-full mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0h6m4 0V5a2 2 0 00-2-2h-2a2 2 0 00-2 2v14m-4 0h6m-6 0H9" />
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-semibold mb-2 text-gray-900">Kristalhelder Overzicht</h4>
-                    <p class="text-gray-600">Zie in één oogopslag wie zich heeft ingeschreven en welke plekken nog beschikbaar zijn, zonder chaos of verwarring.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:border-blue-300 transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center h-16 w-16 bg-blue-100 rounded-full mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.08 12.08 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-semibold mb-2 text-gray-900">Voorkom Planningconflicten</h4>
-                    <p class="text-gray-600">Ons systeem zorgt ervoor dat je nooit dubbele boekingen hebt, wat fouten en frustratie voorkomt voor zowel beheerders als gebruikers.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:border-blue-300 transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center h-16 w-16 bg-blue-100 rounded-full mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-semibold mb-2 text-gray-900">Altijd en Overal Toegankelijk</h4>
-                    <p class="text-gray-600">De RoosterTool is volledig webgebaseerd, wat betekent dat je overal met een internetverbinding je rooster kunt beheren of inzien.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:border-blue-300 transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center h-16 w-16 bg-blue-100 rounded-full mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-semibold mb-2 text-gray-900">Intuïtief en Simpel</h4>
-                    <p class="text-gray-600">Het design is zo helder dat iedereen direct aan de slag kan. Geen lange handleidingen, geen training nodig.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:border-blue-300 transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center h-16 w-16 bg-blue-100 rounded-full mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2v5l-1.25 1.5M15 7a2 2 0 00-2-2h-2a2 2 0 00-2 2v5l-1.25 1.5M15 7H9" />
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-semibold mb-2 text-gray-900">Veilige Gegevensopslag</h4>
-                    <p class="text-gray-600">De gegevens van jou en je gebruikers zijn veilig opgeslagen, met de nodige maatregelen om de privacy te waarborgen.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h3 class="text-3xl font-bold text-gray-900 mb-4">Klaar om te beginnen?</h3>
-            <p class="text-lg text-gray-600 mb-8">
-                Sluit je aan bij de vele scholen, bedrijven en organisaties die de RoosterTool gebruiken voor een soepele planning.
-            </p>
-            <a href="contact.html"
-               class="inline-block bg-blue-600 text-white font-bold px-10 py-4 rounded-full text-xl hover:bg-blue-700 transition-colors duration-200 ease-in-out shadow-lg">
-                Contact 🚀
-            </a>
-        </div>
-    </section>
-
-    <footer class="bg-white border-t border-gray-200 py-8">
-        <div class="max-w-7xl mx-auto px-6 text-center text-sm text-gray-500 flex justify-center items-center space-x-4">
-            <p>© 2025 RoosterTool. Made with ❤️ by Jordy D.</p>
-            <a href="dashboard.html" class="text-gray-400 hover:text-gray-600 transition-colors duration-200 ease-in-out">Admin Login</a>
-        </div>
-    </footer>
+    <footer class="bg-white border-t border-gray-200 py-8">
+        <div class="max-w-7xl mx-auto px-6 text-center text-sm text-gray-500 flex justify-center items-center space-x-4">
+            <p>© 2025 RoosterTool. Made with ❤️ by Jordy D.</p>
+            <a href="dashboard.html" class="text-gray-400 hover:text-gray-600 transition-colors duration-200 ease-in-out">Admin Login</a>
+        </div>
+    </footer>
 </body>
 </html>
-
-
