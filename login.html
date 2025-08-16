@@ -2,38 +2,58 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Login | Roostertool</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="menu.js" defer></script>
-    <script src="storage.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inloggen voor Toetsen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-sm text-center relative">
+        <a href="index.html" class="absolute top-4 left-4 text-gray-500 hover:text-blue-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-10v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+        </a>
+        <h1 class="text-3xl font-bold text-blue-600 mb-6">Inloggen</h1>
+        <form id="loginForm" class="space-y-4">
+            <input type="text" id="username" placeholder="Naam" required
+                   class="w-full border border-gray-300 px-4 py-2 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+            <input type="password" id="password" placeholder="Wachtwoord" required
+                   class="w-full border border-gray-300 px-4 py-2 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+            <button type="submit"
+                    class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors">
+                Inloggen
+            </button>
+        </form>
+        <p id="loginMessage" class="mt-4 text-red-500 font-medium hidden">
+            Ongeldige gebruikersnaam of wachtwoord.
+        </p>
+    </div>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById("loginBtn").onclick = function() {
-                const role = document.getElementById('role').value;
-                const username = document.getElementById('username').value;
-                localStorage.setItem('userRole', role);
-                localStorage.setItem('username', username);
-                window.location.href = 'index.html';
-            };
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+            const accountKey = 'account_' + username;
+            const loginMessage = document.getElementById('loginMessage');
+
+            if (localStorage.getItem(accountKey)) {
+                const account = JSON.parse(localStorage.getItem(accountKey));
+                if (account.wachtwoord === password) {
+                    localStorage.setItem('actieveLeerling', username);
+                    window.location.href = 'inschrijven.html';
+                } else {
+                    loginMessage.classList.remove('hidden');
+                }
+            } else {
+                loginMessage.classList.remove('hidden');
+            }
         });
     </script>
-</head>
-<body>
-    <header>
-        <div id="menu"></div>
-    </header>
-    <main>
-        <h2>Login Demo</h2>
-        <label for="username">Naam:</label>
-        <input type="text" id="username" placeholder="Vul je naam in">
-        <label for="role">Kies jouw rol:</label>
-        <select id="role">
-            <option value="leerling">Leerling</option>
-            <option value="medewerker">Medewerker</option>
-            <option value="coordinator">Coördinator</option>
-            <option value="admin">Admin</option>
-        </select>
-        <button id="loginBtn">Inloggen</button>
-    </main>
 </body>
 </html>
